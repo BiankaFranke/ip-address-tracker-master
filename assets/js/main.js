@@ -6,16 +6,16 @@ const ip = document.querySelector('#ip');
 const ort = document.querySelector('#location');
 const timezone = document.querySelector('#timezone');
 const isp = document.querySelector('#isp');
-let url = `https://geo.ipify.org/api/v2/country,city?apiKey=${myAPI}`;
+let url = `http://geo.ipify.org/api/v2/country,city?apiKey=${myAPI}`;
 
 // INITIAL MAP
 let map = L.map('map', {
     zoomControl: false,
     dragging: false,
 }).setView([0, 0], 13);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 map.scrollWheelZoom.disable();
 let marker = L.marker([0, 0]).addTo(map);
@@ -57,4 +57,4 @@ btn.addEventListener('click', (e) => {
         map.setView([data['location']['lat'], data['location']['lng']], 13)
         marker.setLatLng([data['location']['lat'], data['location']['lng']])
     });
-})
+});
