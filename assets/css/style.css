@@ -29,15 +29,24 @@ main {
 
 h1 {
     padding-top: 2rem;
+    font-size: 1.5rem;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+h4 {
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0rem;
+    color: hsl(0, 0%, 59%);
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%);
+p {
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(0, 0%, 17%);
+}
+
+#isp {
+    padding-bottom: 1rem;
 }
 
 /* HEADER */
@@ -46,7 +55,6 @@ header {
     color: white;
     text-align: center;
     height: 20rem;
-    background-color: red;
     background-image: url(../images/pattern-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,6 +79,10 @@ form input {
     border-radius: 1rem 0rem 0rem 1rem;
 }
 
+form input:hover {
+    cursor: pointer;
+}
+
 #btnSubmit {
     border: none;
     background-color: black;
@@ -79,25 +91,70 @@ form input {
     transform: translate(-0.3rem, 0.05rem);
 }
 
-
-/* FOOTER */
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* padding-bottom: 2rem; */
-    min-height: 29rem;
+#btnSubmit:hover {
+    cursor: pointer;
 }
 
-/* @media only screen and (min-width: 600px) {
-    header .desktop {
-        display: none;
+#map {
+    width: 100vw;
+    min-height: 29.5rem;
+    transform: translateY(-18rem);
+    position: relative;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    header {
+        background-image: url(../images/pattern-bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
-    header .mobile {
-        display: block;
+    h1 {
+        font-size: 3rem;
     }
 
-  } */
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    main {
+        min-height: 20vh;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .containerOutput {
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid hsl(0, 0%, 59%);
+        padding-left: 1rem;
+    }
+
+    .containerOutput:first-of-type {
+        border-left: none;
+    }
+
+    #map {
+            min-height: 34.5rem;
+        }
+}
+
+@media only screen and (min-width: 760px) {    
+    #map {
+        max-height: 36.7rem;
+    }
+
+    form input {
+        min-width: 40vw;
+    }
+}

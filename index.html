@@ -11,13 +11,28 @@
     />
     <title>Frontend Mentor | IP Address Tracker</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <header>
       <h1 class="mobile" class="desktop">IP Address Tracker</h1>
       <form>
         <div>
-          <input type="text" placeholder="192.212.174.101" id="inputIP" />
+          <input
+            type="text"
+            placeholder="Search for an IP address or domain"
+            id="inputIP"
+          />
           <button type="submit" id="btnSubmit">
             <img src="./assets/images/icon-arrow.svg" alt="Arrow" />
           </button>
@@ -25,35 +40,28 @@
       </form>
     </header>
     <main>
-      <div>
+      <div class="containerOutput">
         <h4>IP ADDRESS</h4>
-        <p class="output" id="ip">192.212.174.101</p>
+        <p class="output" id="ip"></p>
       </div>
 
-      <div>
+      <div class="containerOutput">
         <h4>LOCATION</h4>
-        <p class="output" id="location">Brooklyn, NY 10001</p>
+        <p class="output" id="location"></p>
       </div>
 
-      <div>
+      <div class="containerOutput">
         <h4>TIMEZONE</h4>
-        <p class="output" id="timezone">UTC -05:00</p>
+        <p class="output" id="timezone"></p>
       </div>
 
-      <div>
+      <div class="containerOutput">
         <h4>ISP</h4>
-        <p class="output" id="isp">SpaceX Starlink</p>
+        <p class="output" id="isp"></p>
       </div>
     </main>
+    <div id="map"></div>
     <script src="./config.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
-  <footer>
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/BiankaFranke">Bianka</a>.
-    </div> -->
-  </footer>
 </html>
