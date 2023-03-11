@@ -1,6 +1,5 @@
 // DECLARATIONS
-// const myAPI = config.API;
-const myAPI = process.env.REACT_APP_API_KEY;
+const myAPI = config.API;
 const btn = document.querySelector('#btnSubmit');
 let inputIP = document.querySelector('#inputIP');
 const ip = document.querySelector('#ip');
